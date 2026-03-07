@@ -1,7 +1,5 @@
 package modele;
 
-import modele.entity.Entity;
-
 import java.util.ArrayList;
 
 public class Game {
