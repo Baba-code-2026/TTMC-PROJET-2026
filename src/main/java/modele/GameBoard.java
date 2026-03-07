@@ -7,14 +7,14 @@ public class GameBoard {
     //Attributs
     private static GameBoard singleton = null;
     private Game game;
-    private ArrayList<Tilde tildes;
+    private ArrayList<Tilde> tildes;
 
     private GameBoard(Game game){
         this.game = game;
         tildes = new ArrayList<>();
     }
 
-    public int answerQuestion(Entity e, Tilde e){
+    public int answerQuestion(Entity e, Tilde t){
         return 0;
     }
 
