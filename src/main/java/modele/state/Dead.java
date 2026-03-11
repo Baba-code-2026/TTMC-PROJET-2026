@@ -16,7 +16,7 @@ public class Dead extends StatePlayer {
 
     @Override
     public void movePlayer(int score, int x, int y) {
-
+        return ; //
     }
 
     @Override
