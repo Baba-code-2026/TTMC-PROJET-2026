@@ -1,15 +1,16 @@
-package modele;
+package modele.state;
 
-public class Versus extends StatePlayer{
+import modele.entity.Player;
+
+public class Current extends StatePlayer {
 
     // Constructeur
-    Versus(Player p){
-        super(p);
+    Current(Player player) {
+        super(player);
     }
 
     @Override
     public void endTurn() {
-
     }
 
     @Override

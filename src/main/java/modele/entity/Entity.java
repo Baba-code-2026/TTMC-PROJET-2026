@@ -1,4 +1,4 @@
-package modele;
+package modele.entity;
 
 public abstract class Entity {
     // Attributs

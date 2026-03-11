@@ -1,10 +1,12 @@
-package modele;
+package modele.state;
 
-public class Dead extends StatePlayer {
+import modele.entity.Player;
 
-    //Constructeur
-    Dead(Player player) {
-        super(player);
+public class Versus extends StatePlayer {
+
+    // Constructeur
+    Versus(Player p){
+        super(p);
     }
 
     @Override
@@ -22,4 +24,3 @@ public class Dead extends StatePlayer {
 
     }
 }
-
