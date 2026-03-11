@@ -1,5 +1,7 @@
 package modele;
 
+import modele.entity.Entity;
+
 import java.io.File;
 import java.util.ArrayList;
 
