@@ -1,4 +1,6 @@
-package modele;
+package modele.entity;
+
+import modele.state.StatePlayer;
 
 public class Player extends Entity {
 

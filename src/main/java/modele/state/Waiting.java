@@ -1,6 +1,8 @@
-package modele;
+package modele.state;
 
-public class Waiting extends StatePlayer{
+import modele.entity.Player;
+
+public class Waiting extends StatePlayer {
 
     // Constructeur
     Waiting(Player player) {

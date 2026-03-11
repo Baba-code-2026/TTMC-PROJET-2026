@@ -1,9 +1,11 @@
-package modele;
+package modele.state;
 
-public class Current extends StatePlayer{
+import modele.entity.Player;
 
-    // Constructeur
-    Current(Player player) {
+public class Dead extends StatePlayer {
+
+    //Constructeur
+    Dead(Player player) {
         super(player);
     }
 
@@ -22,3 +24,4 @@ public class Current extends StatePlayer{
 
     }
 }
+
