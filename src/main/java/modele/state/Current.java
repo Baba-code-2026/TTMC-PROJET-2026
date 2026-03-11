@@ -11,6 +11,7 @@ public class Current extends StatePlayer {
 
     @Override
     public void endTurn() {
+
     }
 
     @Override

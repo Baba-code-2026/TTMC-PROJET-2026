@@ -9,7 +9,7 @@ public class Theme {
     private ArrayList<Subject> subjects;
 
     // Constructeur
-    public Theme(String themeName) {
+    Theme(String themeName) {
         this.themeName = themeName;
         subjects = new ArrayList<Subject>();
     }
