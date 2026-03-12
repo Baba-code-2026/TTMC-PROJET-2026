@@ -27,10 +27,6 @@ public class Game {
 
     }
 
-    public void createThemeQuestion(String questJson){
-
-    }
-
     public boolean addEntity(Entity entity){
         return false;
     }
