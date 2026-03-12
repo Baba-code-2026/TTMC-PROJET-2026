@@ -1,0 +1,122 @@
+[
+  {
+   "Culture" : {
+      "Musique" : [
+        {
+        "question" : "Who sang the song 'Voulez vous' in 1979",
+        "trueAnswer" : "ABBA",
+        "difficulty" : 1,
+        "answers" : ["Mylène Farmer",
+          "Claudio Capeo",
+          "ABBA",
+          "France Gall"]
+        },
+        {
+          "question" : "Where does the name AC/DC come from",
+          "trueAnswer" : "Alternating Current / Direct Current ",
+          "difficulty" : 2,
+          "answers" : ["Anti-Christ/Devil's Child ",
+            "Alternating Current / Direct Current ",
+            "Abaddon Conceptus/ Dominion Chaos ",
+            "Angry Cook, Dirty Culinary "]
+        },
+        {
+          "question" : "Who sang the song  “Wish You Were Here\" in 1975",
+          "trueAnswer" : "Pink Floyd ",
+          "difficulty" : 3,
+          "answers" : ["Jimi Hendrix  ",
+            "Deep Purple  ",
+            "Led Zeppelin  ",
+            "Pink Floyd "]
+        },
+        {
+          "question" : "Who sang the song  “ Tous les mêmes \" in 2009",
+          "trueAnswer" : "La fouine ",
+          "difficulty" : 4,
+          "answers" : ["Stromae  ",
+            "La fouine ",
+            "Bramsito ",
+            "Kendji Girac "]
+        }
+      ]
+   },
+   "Tourisme" : {
+      "Ancient & New Wonders " : [
+        {
+          "question" : "Which wonder is part of the New Seven Wonders of the World?",
+          "trueAnswer" : "The Colosseum",
+          "difficulty" : 1,
+          "answers" : ["The Hanging Gardens of Babylon",
+            "The Colosseum",
+            "The Temple of Artemis",
+            "he Lighthouse of Alexandria"]
+        },
+        {
+          "question" : "Which of the original Ancient Seven Wonders is the only one still standing today?",
+          "trueAnswer" : "The Great Pyramid of Giza",
+          "difficulty" : 2,
+          "answers" : ["The Mausoleum at Halicarnassus ",
+            "The Statue of Zeus ",
+            "The Great Pyramid of Giza ",
+            "The Temple of Artemis"]
+        },
+        {
+          "question" : "In which country can you visit Petra, one of the New Seven Wonders of the World?",
+          "trueAnswer" : "Jordan ",
+          "difficulty" : 3,
+          "answers" : ["Egypt",
+            "Jordan ",
+            "Turkey",
+            " Saudi Arabia"]
+        },
+        {
+          "question" : "What distinctive feature is associated with the construction of Chichén Itzá",
+          "trueAnswer" : "Its extremely precise astronomical alignment",
+          "difficulty" : 4,
+          "answers" : ["Its extremely precise astronomical alignment",
+            "Its temple covered in gold",
+            "Its use of Roman concrete",
+            "ts complete reconstruction in the 20th century"]
+        }
+      ],
+     "World Capitals" : [
+       {
+         "question" : "Which wonder is part of the New Seven Wonders of the World?",
+         "trueAnswer" : "The Colosseum",
+         "difficulty" : 1,
+         "answers" : ["The Hanging Gardens of Babylon",
+           "The Colosseum",
+           "The Temple of Artemis",
+           "he Lighthouse of Alexandria"]
+       },
+       {
+         "question" : "Which of the original Ancient Seven Wonders is the only one still standing today?",
+         "trueAnswer" : "The Great Pyramid of Giza",
+         "difficulty" : 2,
+         "answers" : ["The Mausoleum at Halicarnassus ",
+           "The Statue of Zeus ",
+           "The Great Pyramid of Giza ",
+           "The Temple of Artemis"]
+       },
+       {
+         "question" : "In which country can you visit Petra, one of the New Seven Wonders of the World?",
+         "trueAnswer" : "Jordan ",
+         "difficulty" : 3,
+         "answers" : ["Egypt",
+           "Jordan ",
+           "Turkey",
+           " Saudi Arabia"]
+       },
+       {
+         "question" : "What distinctive feature is associated with the construction of Chichén Itzá",
+         "trueAnswer" : "Its extremely precise astronomical alignment",
+         "difficulty" : 4,
+         "answers" : ["Its extremely precise astronomical alignment",
+           "Its temple covered in gold",
+           "Its use of Roman concrete",
+           "ts complete reconstruction in the 20th century"]
+       }
+     ]
+   }
+  }
+]
