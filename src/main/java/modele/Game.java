@@ -1,6 +1,8 @@
 package modele;
 
+import com.google.gson.Gson;
 import modele.entity.Entity;
+import modele.question.Question;
 
 import java.util.ArrayList;
 
@@ -24,10 +26,6 @@ public class Game {
     }
 
     public void turnManagement(){
-
-    }
-
-    public void createThemeQuestion(String questJson){
 
     }
 
