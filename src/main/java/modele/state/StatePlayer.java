@@ -1,4 +1,6 @@
-package modele;
+package modele.state;
+
+import modele.entity.Player;
 
 public abstract class StatePlayer {
 

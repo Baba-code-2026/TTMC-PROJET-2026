@@ -1,4 +1,4 @@
-package modele;
+package modele.question;
 
 import javax.security.auth.Subject;
 import java.util.ArrayList;

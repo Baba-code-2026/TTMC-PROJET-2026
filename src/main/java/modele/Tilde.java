@@ -1,5 +1,7 @@
 package modele;
 
+import modele.question.Theme;
+
 public class Tilde {
 
     //Attributs
