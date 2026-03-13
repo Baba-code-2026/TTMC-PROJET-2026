@@ -1,32 +1,22 @@
 [
   {
     "positionX" : 1,
-    "positionY" : 1,
-    "color" : "blue",
-    "theme" : "étoile"
+    "positionY" : 1
   },
   {
     "positionX" : 1,
-    "positionY" : 2,
-    "color" : "red",
-    "theme" : "étoile"
+    "positionY" : 2
   },
   {
     "positionX" : 1,
-    "positionY" : 3,
-    "color" : "yellow",
-    "theme" : "étoile"
+    "positionY" : 3
   },
   {
     "positionX" : 1,
-    "positionY" : 4,
-    "color" : "blue",
-    "theme" : "étoile"
+    "positionY" : 4
   },
   {
     "positionX" : 2,
-    "positionY" : 4,
-    "color" : "red",
-    "theme" : "étoile"
+    "positionY" : 4
   }
 ]

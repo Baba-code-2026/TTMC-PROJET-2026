@@ -8,6 +8,7 @@ import modele.question.Theme;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class GameBoard {
     //Attributs
@@ -41,29 +42,27 @@ public class GameBoard {
         // Ici on va ajouter les cases sauvegardées dans le json
         Gson gson = new Gson();
         try (java.io.FileReader reader = new java.io.FileReader(json)) {
-            java.lang.reflect.Type listType = new com.google.gson.reflect.TypeToken<ArrayList<TildeDTO>>(){}.getType();
-            ArrayList<TildeDTO> dtos = gson.fromJson(reader, listType);
+            java.lang.reflect.Type listType = new com.google.gson.reflect.TypeToken<ArrayList<Tilde>>(){}.getType();
+            ArrayList<Tilde> listTildes = gson.fromJson(reader, listType);
 
-            for (TildeDTO dto : dtos) {
-                Theme t = new Theme(dto.theme); // À remplacer par le bon thème
-                Tilde tilde = new Tilde(dto.positionX, dto.positionY, dto.color, t);
+            for (Tilde tilde : listTildes) {
                 this.tildes.add(tilde);
             }
-
             System.out.println("Chargement réussi : " + tildes.size() + " cases.");
 
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
-
-    private static class TildeDTO {
-        int positionX;
-        int positionY;
-        String color;
-        String theme;
+    public int[] randomArray() {
+        int[] tableau = new int[10]; // taille du tableau
+        Random rand = new Random();
+        for (int i = 0; i < tableau.length; i++) {
+            tableau[i] = rand.nextInt(4) + 1; // génère 1 à 4
+        }
+        return tableau;
     }
-
     // Getter
     public static GameBoard getInstance(Game game)
     {
