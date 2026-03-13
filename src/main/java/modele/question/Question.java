@@ -1,18 +1,69 @@
 package modele.question;
 
+import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.File;
+import java.io.FileReader;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class Question {
-    private String question;
-    private String trueAnswer;
+    // Attributs
+    private String theme;
+    private String subject;
     private int difficulty;
+    private String question;
+
+    @SerializedName("answer")
+    private String trueAnswer;
+
+    @SerializedName("choices")
     private ArrayList<String> answers;
 
-    public Question(String question, String trueAnswer, int difficulty, ArrayList<String> answers) {
+    // Constructeur vide (Obligatoire pour que Gson puisse instancier la classe)
+    public Question() {
+    }
+
+    // Constructeur complet (Utile pour créer des questions manuellement)
+    public Question(String theme, String subject, String question, String trueAnswer, int difficulty, ArrayList<String> answers) {
+        this.theme = theme;
+        this.subject = subject;
         this.question = question;
         this.trueAnswer = trueAnswer;
         this.difficulty = difficulty;
         this.answers = answers;
+    }
+
+    /**
+     * Méthode statique pour charger toutes les questions depuis un fichier JSON
+     * @param jsonFile Le fichier .json à lire
+     * @return Une liste d'objets Question
+     */
+    public static ArrayList<Question> loadQuestions(File jsonFile) {
+        Gson gson = new Gson();
+        try (FileReader reader = new FileReader(jsonFile)) {
+            // On définit le type attendu : ArrayList<Question>
+            Type listType = new TypeToken<ArrayList<Question>>(){}.getType();
+
+            // On désérialise le JSON directement en liste d'objets
+            return gson.fromJson(reader, listType);
+        } catch (Exception e) {
+            System.err.println("Erreur lors du chargement du JSON de questions :");
+            e.printStackTrace();
+            return new ArrayList<>(); // Retourne une liste vide pour éviter les crashs
+        }
+    }
+
+    // --- Getters ---
+
+    public String getTheme() {
+        return theme;
+    }
+
+    public String getSubject() {
+        return subject;
     }
 
     public int getDifficulty() {
@@ -29,5 +80,10 @@ public class Question {
 
     public ArrayList<String> getAnswers() {
         return answers;
+    }
+
+    @Override
+    public String toString() {
+        return "Question [" + theme + " - " + subject + " (Diff: " + difficulty + ")] : " + question;
     }
 }

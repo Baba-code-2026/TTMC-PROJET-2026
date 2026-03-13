@@ -1,0 +1,32 @@
+[
+  {
+    "positionX" : 1,
+    "positionY" : 1,
+    "color" : "blue",
+    "theme" : "étoile"
+  },
+  {
+    "positionX" : 1,
+    "positionY" : 2,
+    "color" : "red",
+    "theme" : "étoile"
+  },
+  {
+    "positionX" : 1,
+    "positionY" : 3,
+    "color" : "yellow",
+    "theme" : "étoile"
+  },
+  {
+    "positionX" : 1,
+    "positionY" : 4,
+    "color" : "blue",
+    "theme" : "étoile"
+  },
+  {
+    "positionX" : 2,
+    "positionY" : 4,
+    "color" : "red",
+    "theme" : "étoile"
+  }
+]

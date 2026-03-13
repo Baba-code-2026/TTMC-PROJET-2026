@@ -1,0 +1,309 @@
+[
+  {
+    "theme": "Mystery",
+    "subject": "Cars : Characters",
+    "difficulty": 1,
+    "question": "What is the name of Lightning McQueen's girlfriend in Cars?",
+    "answer": "Sally",
+    "choices": ["Flo", "Holley Shiftwell", "Sally", "Cruz Ramirez"]
+  },
+  {
+    "theme": "Mystery",
+    "subject": "Cars : Characters",
+    "difficulty": 2,
+    "question": "What is the name of the retired race car who trains Lightning McQueen in the first movie?",
+    "answer": "Doc Hudson",
+    "choices": ["Strip Weathers", "Jackson Storm", "Doc Hudson", "Smokey"]
+  },
+  {
+    "theme": "Mystery",
+    "subject": "Cars : Characters",
+    "difficulty": 3,
+    "question": "What is the name of the British spy car who works with Mater in Cars 2?",
+    "answer": "Finn McMissile",
+    "choices": ["Jackson Storm", "Chick Hicks", "Finn McMissile", "Sterling"]
+  },
+  {
+    "theme": "Mystery",
+    "subject": "Cars : Characters",
+    "difficulty": 4,
+    "question": "In Mater's Tall Tales, what kind of job does Mater say he had in \"Rescue Squad Mater\"?",
+    "answer": "Firefighter",
+    "choices": ["Firefighter", "Judge", "Doctor", "Teacher"]
+  },
+
+  {
+    "theme": "Mystery",
+    "subject": "Cars : Places, Races and Facts",
+    "difficulty": 1,
+    "question": "What number does Lightning McQueen race with?",
+    "answer": "95",
+    "choices": ["86", "51", "43", "95"]
+  },
+  {
+    "theme": "Mystery",
+    "subject": "Cars : Places, Races and Facts",
+    "difficulty": 2,
+    "question": "What is the name of the town where Lightning McQueen gets stuck in the first Cars movie?",
+    "answer": "Radiator Springs",
+    "choices": ["Ornament Valley", "Radiator Springs", "Thomasville", "Motor City"]
+  },
+  {
+    "theme": "Mystery",
+    "subject": "Cars : Places, Races and Facts",
+    "difficulty": 3,
+    "question": "Who is Lightning McQueen's main rival in the first Cars movie?",
+    "answer": "Chick Hicks",
+    "choices": ["Jackson Storm", "Chick Hicks", "The King", "Francesco Bernoulli"]
+  },
+  {
+    "theme": "Mystery",
+    "subject": "Cars : Places, Races and Facts",
+    "difficulty": 4,
+    "question": "In \"Tokyo Mater\", what type of competition does Mater take part in?",
+    "answer": "A drifting race",
+    "choices": ["A demolition derby", "A drifting race", "A boat race", "A rally race"]
+  },
+
+  {
+    "theme": "Informatics",
+    "subject": "VBA",
+    "difficulty": 1,
+    "question": "What does the following VBA instruction do? Cells(1,1).Value = 10",
+    "answer": "Writes the value 10 into cell A1",
+    "choices": [
+      "Deletes cell A1",
+      "Writes the value 10 into cell A1",
+      "Copies cell A1",
+      "Selects cell A10"
+    ]
+  },
+  {
+    "theme": "Informatics",
+    "subject": "VBA",
+    "difficulty": 2,
+    "question": "Which keyword is used to declare a variable in VBA?",
+    "answer": "Dim",
+    "choices": ["Dim", "Var", "Declare", "Let"]
+  },
+  {
+    "theme": "Informatics",
+    "subject": "VBA",
+    "difficulty": 3,
+    "question": "Which event is triggered when a user changes a cell value on a worksheet?",
+    "answer": "Worksheet_Change",
+    "choices": [
+      "Workbook_Open",
+      "Worksheet_Change",
+      "Worksheet_Activate",
+      "Workbook_SheetEdit"
+    ]
+  },
+  {
+    "theme": "Informatics",
+    "subject": "VBA",
+    "difficulty": 4,
+    "question": "Which VBA object allows you to store dynamic key-value pairs?",
+    "answer": "Dictionary",
+    "choices": ["Collection", "Dictionary", "ArrayList", "Ranges"]
+  },
+
+  {
+    "theme": "Entertainment",
+    "subject": "John Deere",
+    "difficulty": 1,
+    "question": "What color combination is most commonly associated with John Deere machinery?",
+    "answer": "Green and yellow",
+    "choices": ["Red and black", "Blue and white", "Green and yellow", "Orange and silver"]
+  },
+  {
+    "theme": "Entertainment",
+    "subject": "John Deere",
+    "difficulty": 2,
+    "question": "Which of the following is a well-known John Deere slogan?",
+    "answer": "Nothing Runs like a Deere",
+    "choices": [
+      "Built for the future",
+      "Nothing Runs like a Deere",
+      "Power for every field",
+      "Stronger every season"
+    ]
+  },
+  {
+    "theme": "Entertainment",
+    "subject": "John Deere",
+    "difficulty": 3,
+    "question": "John Deere's AutoTrac system is primarily used for which purpose?",
+    "answer": "Automatic steering and precision guidance",
+    "choices": [
+      "Increasing fuel tank capacity",
+      "Automatic steering and precision guidance",
+      "Monitoring livestock health",
+      "Enhancing tire traction on wet soil"
+    ]
+  },
+  {
+    "theme": "Entertainment",
+    "subject": "John Deere",
+    "difficulty": 4,
+    "question": "On the John Deere 6155R, what is the primary function of the AutoQuad Plus transmission's differential lock system?",
+    "answer": "Improve traction by locking both rear wheels to rotate at the same speed",
+    "choices": [
+      "Reduce engine RPM during transport to save fuel",
+      "Automatically synchronize PTO speed with ground speed",
+      "Improve traction by locking both rear wheels to rotate at the same speed",
+      "Increase hydraulic flow to the front axle during heavy lifting"
+    ]
+  },
+
+  {
+    "theme": "Tourism",
+    "subject": "Ancient and New Wonders",
+    "difficulty": 1,
+    "question": "Which wonder is part of the New Seven Wonders of the World?",
+    "answer": "The Colosseum",
+    "choices": [
+      "The Hanging Gardens of Babylon",
+      "The Colosseum",
+      "The Temple of Artemis",
+      "The Lighthouse of Alexandria"
+    ]
+  },
+  {
+    "theme": "Tourism",
+    "subject": "Ancient and New Wonders",
+    "difficulty": 2,
+    "question": "Which of the original Ancient Seven Wonders is the only one still standing today?",
+    "answer": "The Great Pyramid of Giza",
+    "choices": [
+      "The Mausoleum at Halicarnassus",
+      "The Statue of Zeus",
+      "The Great Pyramid of Giza",
+      "The Temple of Artemis"
+    ]
+  },
+  {
+    "theme": "Tourism",
+    "subject": "Ancient and New Wonders",
+    "difficulty": 3,
+    "question": "In which country can you visit Petra, one of the New Seven Wonders of the World?",
+    "answer": "Jordan",
+    "choices": ["Egypt", "Jordan", "Turkey", "Saudi Arabia"]
+  },
+  {
+    "theme": "Tourism",
+    "subject": "Ancient and New Wonders",
+    "difficulty": 4,
+    "question": "What distinctive feature is associated with the construction of Chichen Itza?",
+    "answer": "Its extremely precise astronomical alignment",
+    "choices": [
+      "Its extremely precise astronomical alignment",
+      "Its temple covered in gold",
+      "Its use of Roman concrete",
+      "Its complete reconstruction in the 20th century"
+    ]
+  },
+
+  {
+    "theme": "Tourism",
+    "subject": "World Capitals",
+    "difficulty": 1,
+    "question": "What is the capital of Madagascar?",
+    "answer": "Antananarivo",
+    "choices": ["Yaounde", "Moroni", "Antananarivo", "Bamako"]
+  },
+  {
+    "theme": "Tourism",
+    "subject": "World Capitals",
+    "difficulty": 2,
+    "question": "What is the capital of the Mongolian Republic?",
+    "answer": "Ulaanbaatar",
+    "choices": ["Ulaanbaatar", "Kathmandu", "Sana'a", "Naypyidaw"]
+  },
+  {
+    "theme": "Tourism",
+    "subject": "World Capitals",
+    "difficulty": 3,
+    "question": "What is the capital of Moldova?",
+    "answer": "Chisinau",
+    "choices": ["Bratislava", "Vaduz", "Chisinau", "Nuuk"]
+  },
+  {
+    "theme": "Tourism",
+    "subject": "World Capitals",
+    "difficulty": 4,
+    "question": "What is the constitutional capital of Bolivia?",
+    "answer": "La Paz",
+    "choices": ["Asuncion", "Sucre", "Montevideo", "La Paz"]
+  },
+
+  {
+    "theme": "Entertainment",
+    "subject": "Songs and Artists",
+    "difficulty": 1,
+    "question": "Who sang the song \"Voulez-vous\" in 1979?",
+    "answer": "ABBA",
+    "choices": ["Mylene Farmer", "Claudio Capeo", "ABBA", "France Gall"]
+  },
+  {
+    "theme": "Entertainment",
+    "subject": "Songs and Artists",
+    "difficulty": 2,
+    "question": "Where does the name AC/DC come from?",
+    "answer": "Alternating Current / Direct Current",
+    "choices": [
+      "Alternating Current / Direct Current",
+      "Anti-Christ/Devil's Child",
+      "Abaddon Conceptus/ Dominion Chaos",
+      "Angry Cook, Dirty Culinary"
+    ]
+  },
+  {
+    "theme": "Entertainment",
+    "subject": "Songs and Artists",
+    "difficulty": 3,
+    "question": "Who sang the song \"Wish You Were Here\" in 1975?",
+    "answer": "Pink Floyd",
+    "choices": ["Jimi Hendrix", "Deep Purple", "Led Zeppelin", "Pink Floyd"]
+  },
+  {
+    "theme": "Entertainment",
+    "subject": "Songs and Artists",
+    "difficulty": 4,
+    "question": "Who sang the song \"Tous les memes\" in 2009?",
+    "answer": "La fouine",
+    "choices": ["Stromae", "La fouine", "Bramsito", "Kendji Girac"]
+  },
+  {
+    "theme": "Informatics",
+    "subject": "OOP",
+    "difficulty": 1,
+    "question": "Which concept allows a class to acquire the properties and behaviors of another class?",
+    "answer": "Inheritance",
+    "choices": ["Encapsulation", "Polymorphism", "Inheritance", "Abstraction"]
+  },
+  {
+    "theme": "Informatics",
+    "subject": "OOP",
+    "difficulty": 2,
+    "question": "What is the main difference between an Abstract Class and an Interface?",
+    "answer": "Abstract classes can contain constructors, while interfaces cannot",
+    "choices": ["Abstract classes can contain constructors, while interfaces cannot", "Interfaces can have fields, while abstract classes cannot", "Abstract classes support multiple inheritance, while interfaces do not", "There is no functional difference"]
+  },
+  {
+  "theme": "Informatics",
+  "subject": "OOP",
+  "difficulty": 3,
+  "question": "In the context of the Liskov Substitution Principle (LSP), what is the core requirement?",
+  "answer": "Subtypes must be usable as replacements for their base types without altering program correctness",
+  "choices": ["Subtypes must be usable as replacements for their base types without altering program correctness", "Objects should only depend on concrete classes, never on abstractions", "A class should be open for extension but closed for modification", "All classes must implement the same interface"]
+},
+  {
+  "theme": "Informatics",
+  "subject": "OOP",
+  "difficulty": 4,
+  "question": "What is \"Multiple Inheritance\" in OOP and why is it often avoided in languages like Java or C#?",
+  "answer": "It allows a class to inherit from multiple parent classes, which can lead to the \"Diamond Problem.\"",
+  "choices": ["It refers to having too many methods in one class", "It allows a class to inherit from multiple parent classes, which can lead to the \"Diamond Problem\"", "It is the process of creating many instances of one object", "It prevents the use of polymorphism"]
+}
+]
