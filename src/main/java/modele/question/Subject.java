@@ -1,6 +1,7 @@
 package modele.question;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Subject {
 
@@ -15,15 +16,22 @@ public class Subject {
         questions = new ArrayList<>();
     }
 
-    public String getName() {
-        return name;
+    public String getName() { return name; }
+
+    public void addQuestion(Question q) {
+        questions.add(q);
     }
 
-    public void addQuestion(Question q)
-    {
-        if(questions.size() < MAX_QUESTION)
-        {
-            questions.add(q);
-        }
+    public Question getRandomQuestion() {
+        if (questions.isEmpty()) return null;
+        return questions.get(new Random().nextInt(questions.size()));
+    }
+
+    @Override
+    public String toString() {
+        return "Subject{" +
+                "name='" + name + "'" +
+                ", questions=\n\t\t" + questions +
+                "}\n\t";
     }
 }

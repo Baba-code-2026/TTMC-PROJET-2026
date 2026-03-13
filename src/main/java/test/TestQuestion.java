@@ -1,44 +1,46 @@
 package test;
 
 import modele.question.Question;
+import modele.question.Theme;
+
 import java.io.File;
 import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Random;
+
 
 public class TestQuestion {
     public static void main(String[] args) {
-        try {
-            // 1. Récupération de l'URL de la ressource
-            URL resourceUrl = TestQuestion.class.getResource("/JSONFILE/JSON.json");
 
-            if (resourceUrl == null) {
-                System.err.println("ERREUR : Le fichier JSON est introuvable dans le dossier resources.");
-                return;
-            }
+    URL urlJson = TestQuestion.class.getResource("/JSONFILE/JSON.json");
+    if (urlJson == null) {
+        System.err.println("Fichier JSON non trouvé !");
+        return;
+    }
+    try{
+        File json = new File(urlJson.toURI());
+        Theme Mystery = new Theme("Mystery");
+        Theme Informatics =  new Theme("Informatics");
+        Theme Entertainment =  new Theme("Entertainment");
+        Theme Tourism =   new Theme("Tourism");
 
-            // 2. Conversion en File
-            URI uri = resourceUrl.toURI();
-            File file = new File(uri);
+        Mystery.loadJson(json);
+        Informatics.loadJson(json);
+        Entertainment.loadJson(json);
+        Tourism.loadJson(json);
 
-            // 3. Chargement des questions
-            ArrayList<Question> toutesLesQuestions = Question.loadQuestions(file);
+        //System.out.println(Mystery);
+        //System.out.println(Informatics);
+        //System.out.println(Entertainment);
+        //System.out.println(Tourism);
 
-            // 4. Affichage
-            if (toutesLesQuestions.isEmpty()) {
-                System.out.println("Aucune question trouvée ou erreur de lecture.");
-            } else {
-                for (Question q : toutesLesQuestions) {
-                    System.out.println("-----------------------------------");
-                    System.out.println("Thème : " + q.getTheme());
-                    System.out.println("Question : " + q.getQuestion());
-                    System.out.println("Réponse : " + q.getTrueAnswer());
-                    System.out.println("Choix : " + q.getAnswers());
-                }
-            }
+        Question randQuest = Entertainment.getQuestionAlea();
+        System.out.println("Question Alea: " + randQuest);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    }catch(Exception e){
+        e.printStackTrace();
+    }
+
     }
 }

@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Question {
     // Attributs
@@ -36,11 +37,7 @@ public class Question {
         this.answers = answers;
     }
 
-    /**
-     * Méthode statique pour charger toutes les questions depuis un fichier JSON
-     * @param jsonFile Le fichier .json à lire
-     * @return Une liste d'objets Question
-     */
+    // lecture des questions et du JSON
     public static ArrayList<Question> loadQuestions(File jsonFile) {
         Gson gson = new Gson();
         try (FileReader reader = new FileReader(jsonFile)) {
@@ -55,8 +52,6 @@ public class Question {
             return new ArrayList<>(); // Retourne une liste vide pour éviter les crashs
         }
     }
-
-    // --- Getters ---
 
     public String getTheme() {
         return theme;
@@ -84,6 +79,6 @@ public class Question {
 
     @Override
     public String toString() {
-        return "Question [" + theme + " - " + subject + " (Diff: " + difficulty + ")] : " + question;
+        return "Question [" + theme + " - " + subject + " (Diff: " + difficulty + ")] : " + question +"\n\t\t";
     }
 }
