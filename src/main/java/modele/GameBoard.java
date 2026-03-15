@@ -28,6 +28,15 @@ public class GameBoard {
         return null;
     }
 
+    public Tilde checkTilde(int score){
+        for( Tilde t : tildes){
+            if(score ==t.getNumber()){
+                return t;
+            }
+        }
+        return null;
+    }
+
     public void createTilde(File json){
         // Ici on va ajouter les cases sauvegardées dans le json
         Gson gson = new Gson();

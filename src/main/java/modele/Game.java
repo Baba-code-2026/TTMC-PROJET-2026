@@ -2,7 +2,9 @@ package modele;
 
 import com.google.gson.Gson;
 import modele.entity.Entity;
+import modele.entity.Player;
 import modele.question.Question;
+import org.xml.sax.ext.EntityResolver2;
 
 import java.util.ArrayList;
 
@@ -22,7 +24,21 @@ public class Game {
 
     // Lance le jeu
     public void start(){
+        // Lecture des fichiers Json de Tilde et Questions
 
+        // Demande le nombre d'entity à créer
+
+        // Créer entre 3 et 5 entites
+        int nbEntities = 4;
+        String []tabNamePlayer = {"Flash McQueen", "Mater", "Sally", "Doc Hudson"};
+        for (int i = 0; i < nbEntities; i++){
+            // IL faut aller Chercher Tield de Départ.
+            Tilde depart = gBoard.checkTilde(0);
+            entities.add(new Player(0,tabNamePlayer[i],depart.getPositionX(),depart.getPositionY()));
+
+            //Lancement du jeu
+            turnManagement();
+        }
     }
 
     public void turnManagement(){
