@@ -22,9 +22,9 @@ public class Subject {
         questions.add(q);
     }
 
-    public Question getRandomQuestion() {
+    public Question getRandomQuestion(int difficulty) {
         if (questions.isEmpty()) return null;
-        return questions.get(new Random().nextInt(questions.size()));
+        return questions.get(difficulty);
     }
 
     @Override

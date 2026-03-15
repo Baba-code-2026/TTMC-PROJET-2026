@@ -2,6 +2,7 @@ package modele.question;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class Theme {
@@ -55,19 +56,20 @@ public class Theme {
                 '}';
     }
 
-    public Question getQuestionAlea(){
+    public Question getQuestionAlea(int  difficulty) {
         if(subjects.isEmpty()) return null;
 
         Random rand = new Random();
         Subject randSubject = subjects.get(rand.nextInt(subjects.size()));
 
-        return randSubject.getRandomQuestion();
+        return randSubject.getRandomQuestion(difficulty);
     }
 
-    public String askQuestion(){
-        this.currentQuestion = getQuestionAlea();
+    public String askQuestion(int  difficulty) {
+        this.currentQuestion = getQuestionAlea(difficulty);
         if(this.currentQuestion == null) return "No question available";
         ArrayList<String> answers = currentQuestion.getAnswers();
+        Collections.shuffle(answers);
         return currentQuestion.getQuestion() + "\n" +
                 "choice a: "+ answers.getFirst() +"\n" +
                 "choice b: "+ answers.get(1) +"\n" +

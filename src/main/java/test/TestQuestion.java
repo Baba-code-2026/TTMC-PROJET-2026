@@ -35,14 +35,20 @@ public class TestQuestion {
         //System.out.println(Informatics);
         //System.out.println(Entertainment);
         //System.out.println(Tourism);
-
-        System.out.println(Entertainment.askQuestion());
-        System.out.println("Your response (a,b,c,d): ");
-        String choice = sc.nextLine();
-        if (Entertainment.checkAnswer(choice)){
-            System.out.println("GOOD JOB, that was the good answer.");
+        System.out.println("choissisez la difficulté entre 1 et 4");
+        int difficulty = sc.nextInt();
+        if (difficulty < 1 || difficulty > 4){
+            System.out.println("invalid difficulty");
         }else{
-            System.out.println("NICE JOB, that was NOT the good answer Dick head.");
+            System.out.println(Entertainment.askQuestion(difficulty-1));
+            System.out.println("Your response (a,b,c,d): ");
+            String choice = sc.nextLine();
+            choice = sc.nextLine();
+            if (Entertainment.checkAnswer(choice)){
+                System.out.println("GOOD JOB, that was the good answer.");
+            }else{
+                System.out.println("NICE JOB, that was NOT the good answer Dick head.");
+            }
         }
 
     }catch(Exception e){
