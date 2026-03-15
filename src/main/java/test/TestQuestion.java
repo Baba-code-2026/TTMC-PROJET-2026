@@ -8,11 +8,12 @@ import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 
 public class TestQuestion {
     public static void main(String[] args) {
-
+    Scanner sc = new Scanner(System.in);
     URL urlJson = TestQuestion.class.getResource("/JSONFILE/JSON.json");
     if (urlJson == null) {
         System.err.println("Fichier JSON non trouvé !");
@@ -35,8 +36,14 @@ public class TestQuestion {
         //System.out.println(Entertainment);
         //System.out.println(Tourism);
 
-        Question randQuest = Entertainment.getQuestionAlea();
-        System.out.println("Question Alea: " + randQuest);
+        System.out.println(Entertainment.askQuestion());
+        System.out.println("Your response (a,b,c,d): ");
+        String choice = sc.nextLine();
+        if (Entertainment.checkAnswer(choice)){
+            System.out.println("GOOD JOB, that was the good answer.");
+        }else{
+            System.out.println("NICE JOB, that was NOT the good answer Dick head.");
+        }
 
     }catch(Exception e){
         e.printStackTrace();

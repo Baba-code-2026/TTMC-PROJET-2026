@@ -77,6 +77,10 @@ public class Question {
         return answers;
     }
 
+    public boolean isCorrect(String playerAnswer) {
+        return this.trueAnswer.equalsIgnoreCase(playerAnswer);
+    }
+
     @Override
     public String toString() {
         return "Question [" + theme + " - " + subject + " (Diff: " + difficulty + ")] : " + question +"\n\t\t";
