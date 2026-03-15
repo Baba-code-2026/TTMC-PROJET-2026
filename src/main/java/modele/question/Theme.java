@@ -1,6 +1,7 @@
 package modele.question;
 
 import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
@@ -54,6 +55,28 @@ public class Theme {
                 "themeName='" + themeName + "'" +
                 ": subjects= \n\t" + subjects +
                 '}';
+    }
+
+    public static ArrayList<Theme> initAllThemes() {
+        ArrayList<Theme> list = new ArrayList<>();
+        list.add(new Theme("Mystery"));
+        list.add(new Theme("Informatics"));
+        list.add(new Theme("Entertainment"));
+        list.add(new Theme("Tourism"));
+
+        try {
+            URL urlJson = Theme.class.getResource("/JSONFILE/JSON.json");
+            if (urlJson != null) {
+                File json = new File(urlJson.toURI());
+                // On charge les données pour chaque thème
+                for (Theme t : list) {
+                    t.loadJson(json);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 
     public Question getQuestionAlea(int  difficulty) {

@@ -13,47 +13,40 @@ import java.util.Scanner;
 
 public class TestQuestion {
     public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    URL urlJson = TestQuestion.class.getResource("/JSONFILE/JSON.json");
-    if (urlJson == null) {
-        System.err.println("Fichier JSON non trouvé !");
-        return;
-    }
-    try{
-        File json = new File(urlJson.toURI());
-        Theme Mystery = new Theme("Mystery");
-        Theme Informatics =  new Theme("Informatics");
-        Theme Entertainment =  new Theme("Entertainment");
-        Theme Tourism =   new Theme("Tourism");
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Theme> themes = Theme.initAllThemes();
 
-        Mystery.loadJson(json);
-        Informatics.loadJson(json);
-        Entertainment.loadJson(json);
-        Tourism.loadJson(json);
-
-        //System.out.println(Mystery);
-        //System.out.println(Informatics);
-        //System.out.println(Entertainment);
-        //System.out.println(Tourism);
-        System.out.println("choissisez la difficulté entre 1 et 4");
-        int difficulty = sc.nextInt();
-        if (difficulty < 1 || difficulty > 4){
-            System.out.println("invalid difficulty");
-        }else{
-            System.out.println(Entertainment.askQuestion(difficulty-1));
-            System.out.println("Your response (a,b,c,d): ");
-            String choice = sc.nextLine();
-            choice = sc.nextLine();
-            if (Entertainment.checkAnswer(choice)){
-                System.out.println("GOOD JOB, that was the good answer.");
-            }else{
-                System.out.println("NICE JOB, that was NOT the good answer Dick head.");
-            }
+        System.out.println("Choose a theme: ");
+        for (int i = 0; i < themes.size(); i++) {
+            System.out.println((i + 1) + ". " + themes.get(i).getThemeName());
         }
 
-    }catch(Exception e){
-        e.printStackTrace();
-    }
+        System.out.print("Your choice: ");
+        int themeChoice = sc.nextInt();
 
+        if (themeChoice < 1 || themeChoice > themes.size()) {
+            System.out.println("Invalid choice.");
+            return;
+        }
+
+        Theme selectedTheme = themes.get(themeChoice - 1);
+        System.out.println("Choose your difficulty: (1-4) ");
+        int difficulty = sc.nextInt();
+        sc.nextLine();
+
+        if (difficulty < 1 || difficulty > 4) {
+            System.out.println("Invalid difficulty.");
+        } else {
+            System.out.println("\n" + selectedTheme.askQuestion(difficulty - 1));
+
+            System.out.print("Your answer (a,b,c,d) : ");
+            String choice = sc.nextLine().trim();
+
+            if (selectedTheme.checkAnswer(choice)) {
+                System.out.println("GOOD JOB, that's the good answer.");
+            } else {
+                System.out.println("NICE JOB, that's the wrong answer dick head.");
+            }
+        }
     }
 }
