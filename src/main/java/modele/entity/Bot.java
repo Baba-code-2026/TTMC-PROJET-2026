@@ -1,5 +1,9 @@
 package modele.entity;
 
+import modele.state.Versus;
+
+import java.util.ArrayList;
+
 public class Bot extends Entity {
 
 
@@ -10,14 +14,14 @@ public class Bot extends Entity {
 
 
     @Override
-    public void moveEntity(int score, int x, int y) {
-        setScore(score);
+    public void moveEntity(int numberCase, int x, int y) {
+        setScore(getScore() + numberCase);
         setPositionX(x);
         setPositionY(y);
     }
 
     @Override
     public void nextTurn() {
-
+        //Pas besoin
     }
 }

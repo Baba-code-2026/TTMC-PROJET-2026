@@ -1,11 +1,14 @@
 package modele.state;
 
+import modele.entity.Entity;
 import modele.entity.Player;
+
+import java.util.ArrayList;
 
 public class Waiting extends StatePlayer {
 
     // Constructeur
-    Waiting(Player player) {
+    public Waiting(Player player) {
         super(player);
     }
 

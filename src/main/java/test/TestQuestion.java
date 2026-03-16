@@ -1,44 +1,52 @@
 package test;
 
 import modele.question.Question;
+import modele.question.Theme;
+
 import java.io.File;
 import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+
 
 public class TestQuestion {
     public static void main(String[] args) {
-        try {
-            // 1. Récupération de l'URL de la ressource
-            URL resourceUrl = TestQuestion.class.getResource("/JSONFILE/JSON.json");
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Theme> themes = Theme.initAllThemes();
 
-            if (resourceUrl == null) {
-                System.err.println("ERREUR : Le fichier JSON est introuvable dans le dossier resources.");
-                return;
-            }
+        System.out.println("Choose a theme: ");
+        for (int i = 0; i < themes.size(); i++) {
+            System.out.println((i + 1) + ". " + themes.get(i).getThemeName());
+        }
 
-            // 2. Conversion en File
-            URI uri = resourceUrl.toURI();
-            File file = new File(uri);
+        System.out.print("Your choice: ");
+        int themeChoice = sc.nextInt();
 
-            // 3. Chargement des questions
-            ArrayList<Question> toutesLesQuestions = Question.loadQuestions(file);
+        if (themeChoice < 1 || themeChoice > themes.size()) {
+            System.out.println("Invalid choice.");
+            return;
+        }
 
-            // 4. Affichage
-            if (toutesLesQuestions.isEmpty()) {
-                System.out.println("Aucune question trouvée ou erreur de lecture.");
+        Theme selectedTheme = themes.get(themeChoice - 1);
+        System.out.println("Choose your difficulty: (1-4) ");
+        int difficulty = sc.nextInt();
+        sc.nextLine();
+
+        if (difficulty < 1 || difficulty > 4) {
+            System.out.println("Invalid difficulty.");
+        } else {
+            System.out.println("\n" + selectedTheme.askQuestion(difficulty - 1));
+
+            System.out.print("Your answer (a,b,c,d) : ");
+            String choice = sc.nextLine().trim();
+
+            if (selectedTheme.checkAnswer(choice)) {
+                System.out.println("GOOD JOB, that's the good answer.");
             } else {
-                for (Question q : toutesLesQuestions) {
-                    System.out.println("-----------------------------------");
-                    System.out.println("Thème : " + q.getTheme());
-                    System.out.println("Question : " + q.getQuestion());
-                    System.out.println("Réponse : " + q.getTrueAnswer());
-                    System.out.println("Choix : " + q.getAnswers());
-                }
+                System.out.println("NICE JOB, that's the wrong answer dick head.");
             }
-
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }

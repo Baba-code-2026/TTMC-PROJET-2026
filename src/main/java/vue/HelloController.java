@@ -1,4 +1,4 @@
-package com.example.ttmc2026;
+package vue;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

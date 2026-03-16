@@ -1,9 +1,11 @@
 package modele.entity;
 
+import java.util.ArrayList;
+
 public abstract class Entity {
     // Attributs
-    private int score;
-    private String name; // Pas de set car il ne peut pas changer de nom
+    private int score = 0;
+    private final String name; // Pas de set car il ne peut pas changer de nom
     private int positionX;
     private int positionY;
 
@@ -15,7 +17,7 @@ public abstract class Entity {
         this.positionY = positionY;
     }
 
-    public abstract void moveEntity(int score,int x, int y);
+    public abstract void moveEntity(int numberCase, int x, int y);
 
     public abstract void nextTurn();
 

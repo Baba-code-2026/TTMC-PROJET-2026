@@ -1,11 +1,14 @@
 package modele.state;
 
+import modele.entity.Entity;
 import modele.entity.Player;
+
+import java.util.ArrayList;
 
 public class Current extends StatePlayer {
 
     // Constructeur
-    Current(Player player) {
+    public Current(Player player) {
         super(player);
     }
 

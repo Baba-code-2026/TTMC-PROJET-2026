@@ -1,6 +1,9 @@
 package modele.entity;
 
 import modele.state.StatePlayer;
+import modele.state.Waiting;
+
+import java.util.ArrayList;
 
 public class Player extends Entity {
 
@@ -8,14 +11,15 @@ public class Player extends Entity {
     private boolean alreadyVersusInTurn = false;
     private StatePlayer statePlayer;
     //Constructeur
-    Player(int score, String name, int positionX, int positionY, StatePlayer state) {
+    public Player(int score, String name, int positionX, int positionY) {
         super(score,name,positionX,positionY);
-        statePlayer = state;
+        statePlayer = new Waiting(this);
     }
 
     @Override
-    public void moveEntity(int score, int x, int y) {
-        statePlayer.movePlayer(score,x,y);
+    public void moveEntity(int numberCase, int x, int y) {
+
+        statePlayer.movePlayer(numberCase,x,y);
     }
 
     @Override
