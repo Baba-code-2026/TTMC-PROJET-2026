@@ -1,11 +1,14 @@
 package modele.state;
 
+import modele.entity.Entity;
 import modele.entity.Player;
+
+import java.util.ArrayList;
 
 public class Versus extends StatePlayer {
 
     // Constructeur
-    Versus(Player p){
+    public Versus(Player p){
         super(p);
     }
 
