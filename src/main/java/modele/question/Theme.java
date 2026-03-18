@@ -51,10 +51,7 @@ public class Theme {
 
     @Override
     public String toString() {
-        return "Theme{" +
-                "themeName='" + themeName + "'" +
-                ": subjects= \n\t" + subjects +
-                '}';
+        return themeName ;
     }
 
     public static ArrayList<Theme> initAllThemes() {
