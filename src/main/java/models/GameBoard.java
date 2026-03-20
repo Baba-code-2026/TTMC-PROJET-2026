@@ -1,14 +1,16 @@
-package modele;
+package models;
 
-import modele.entity.Entity;
+import com.google.gson.JsonObject;
+import models.entity.Entity;
 
 
 import com.google.gson.Gson;
-import modele.question.Theme;
+import models.question.Theme;
 
 import java.io.File;
+import java.io.FileReader;
+import java.net.URL;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class GameBoard {
     //Attributs
@@ -55,14 +57,6 @@ public class GameBoard {
             e.printStackTrace();
         }
     }
-    public int[] randomArray() {
-        int[] tableau = new int[10]; // taille du tableau
-        Random rand = new Random();
-        for (int i = 0; i < tableau.length; i++) {
-            tableau[i] = rand.nextInt(4) + 1; // génère 1 à 4
-        }
-        return tableau;
-    }
     // Getter
     public static GameBoard getInstance(Game game)
     {
@@ -71,8 +65,30 @@ public class GameBoard {
         }
         return singleton;
     }
-
     public Game getGame() {
         return game;
+    }
+
+    public void readTilde() {
+        try {
+            URL urlJson = Theme.class.getResource("/JSONFILE/tilde.json");
+            if (urlJson != null) {
+                File json = new File(urlJson.toURI());
+
+                Gson gson = new Gson();
+
+                // Lecture du fichier
+                JsonObject root = gson.fromJson(new FileReader(json), JsonObject.class);
+
+                // Extraction du tableau "chemin"
+                int[][] tableau = gson.fromJson(root.get("chemin"), int[][].class);
+
+                //creation de la liste des tildes
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

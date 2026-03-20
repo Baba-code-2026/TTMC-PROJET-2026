@@ -1,4 +1,4 @@
-package modele.question;
+package models.question;
 
 import java.io.File;
 import java.net.URL;

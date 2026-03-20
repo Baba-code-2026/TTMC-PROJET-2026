@@ -1,9 +1,6 @@
-package modele.state;
+package models.state;
 
-import modele.entity.Entity;
-import modele.entity.Player;
-
-import java.util.ArrayList;
+import models.entity.Player;
 
 public class Dead extends StatePlayer {
 

@@ -1,9 +1,7 @@
-package modele.entity;
+package models.entity;
 
-import modele.state.StatePlayer;
-import modele.state.Waiting;
-
-import java.util.ArrayList;
+import models.state.StatePlayer;
+import models.state.Waiting;
 
 public class Player extends Entity {
 

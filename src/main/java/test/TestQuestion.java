@@ -1,13 +1,8 @@
 package test;
 
-import modele.question.Question;
-import modele.question.Theme;
+import models.question.Theme;
 
-import java.io.File;
-import java.net.URI;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 
 

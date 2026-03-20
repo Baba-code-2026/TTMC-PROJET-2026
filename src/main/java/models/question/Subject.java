@@ -1,7 +1,6 @@
-package modele.question;
+package models.question;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Subject {
 

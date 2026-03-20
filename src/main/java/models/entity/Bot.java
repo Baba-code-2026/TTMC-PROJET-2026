@@ -1,8 +1,4 @@
-package modele.entity;
-
-import modele.state.Versus;
-
-import java.util.ArrayList;
+package models.entity;
 
 public class Bot extends Entity {
 

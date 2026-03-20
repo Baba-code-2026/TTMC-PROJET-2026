@@ -1,10 +1,7 @@
-package modele;
+package models;
 
-import com.google.gson.Gson;
-import modele.entity.Entity;
-import modele.entity.Player;
-import modele.question.Question;
-import org.xml.sax.ext.EntityResolver2;
+import models.entity.Entity;
+import models.entity.Player;
 
 import java.util.ArrayList;
 

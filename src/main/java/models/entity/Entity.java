@@ -1,6 +1,4 @@
-package modele.entity;
-
-import java.util.ArrayList;
+package models.entity;
 
 public abstract class Entity {
     // Attributs
