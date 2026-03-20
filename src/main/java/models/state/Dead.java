@@ -6,22 +6,17 @@ public class Dead extends StatePlayer {
 
     //Constructeur
     public Dead(Player player) {
-        super(player);
+            super(player);
+        }
+
+        @Override
+        public void endTurn() {
+        }
+        @Override
+        public void movePlayer(int score, int x, int y) {
+            return ; //
+        }
+        @Override
+        public void endVersus() {
+        }
     }
-
-    @Override
-    public void endTurn() {
-
-    }
-
-    @Override
-    public void movePlayer(int score, int x, int y) {
-        return ; //
-    }
-
-    @Override
-    public void endVersus() {
-
-    }
-}
-

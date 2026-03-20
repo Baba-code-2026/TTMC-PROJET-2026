@@ -2,9 +2,8 @@ package models.entity;
 
 public class Bot extends Entity {
 
-
     //Constructeur
-    Bot(int score, String name, int positionX, int positionY){
+    public Bot(int score, String name, int positionX, int positionY){
         super(score,name,positionX,positionY);
     }
 
