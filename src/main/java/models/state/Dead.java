@@ -5,7 +5,7 @@ import models.entity.Player;
 public class Dead extends StatePlayer {
 
     //Constructeur
-    Dead(Player player) {
+    public Dead(Player player) {
         super(player);
     }
 
