@@ -13,4 +13,6 @@ module com.example.ttmc2026 {
     opens vue to javafx.fxml;
     exports vue;
     exports test;
+    exports;
+    opens to
 }

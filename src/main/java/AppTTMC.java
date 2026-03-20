@@ -1,5 +1,3 @@
-package vue;
-
 import javafx.application.Application;
 import javafx.stage.Stage;
 import models.question.Theme;
