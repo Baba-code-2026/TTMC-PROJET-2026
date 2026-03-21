@@ -1,4 +1,4 @@
-package modele.question;
+package models.question;
 
 import java.io.File;
 import java.net.URL;
@@ -51,10 +51,7 @@ public class Theme {
 
     @Override
     public String toString() {
-        return "Theme{" +
-                "themeName='" + themeName + "'" +
-                ": subjects= \n\t" + subjects +
-                '}';
+        return themeName ;
     }
 
     public static ArrayList<Theme> initAllThemes() {

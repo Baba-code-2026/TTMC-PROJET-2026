@@ -1,20 +1,17 @@
-package modele.state;
+package models.state;
 
-import modele.entity.Entity;
-import modele.entity.Player;
+import models.entity.Player;
 
-import java.util.ArrayList;
-
-public class Waiting extends StatePlayer {
+public class Current extends StatePlayer {
 
     // Constructeur
-    public Waiting(Player player) {
+    public Current(Player player) {
         super(player);
     }
 
     @Override
     public void endTurn() {
-
+        
     }
 
     @Override

@@ -1,12 +1,15 @@
-package modele;
+package models;
 
-import modele.entity.Entity;
+import com.google.gson.JsonObject;
+import models.entity.Entity;
 
 
 import com.google.gson.Gson;
-import modele.question.Theme;
+import models.question.Theme;
 
 import java.io.File;
+import java.io.FileReader;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class GameBoard {
@@ -41,29 +44,19 @@ public class GameBoard {
         // Ici on va ajouter les cases sauvegardées dans le json
         Gson gson = new Gson();
         try (java.io.FileReader reader = new java.io.FileReader(json)) {
-            java.lang.reflect.Type listType = new com.google.gson.reflect.TypeToken<ArrayList<TildeDTO>>(){}.getType();
-            ArrayList<TildeDTO> dtos = gson.fromJson(reader, listType);
+            java.lang.reflect.Type listType = new com.google.gson.reflect.TypeToken<ArrayList<Tilde>>(){}.getType();
+            ArrayList<Tilde> listTildes = gson.fromJson(reader, listType);
 
-            for (TildeDTO dto : dtos) {
-                Theme t = new Theme(dto.theme); // À remplacer par le bon thème
-                Tilde tilde = new Tilde(dto.positionX, dto.positionY, dto.color, t);
+            for (Tilde tilde : listTildes) {
                 this.tildes.add(tilde);
             }
-
             System.out.println("Chargement réussi : " + tildes.size() + " cases.");
 
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
-
-    private static class TildeDTO {
-        int positionX;
-        int positionY;
-        String color;
-        String theme;
-    }
-
     // Getter
     public static GameBoard getInstance(Game game)
     {
@@ -72,8 +65,30 @@ public class GameBoard {
         }
         return singleton;
     }
-
     public Game getGame() {
         return game;
+    }
+
+    public void readTilde() {
+        try {
+            URL urlJson = Theme.class.getResource("/JSONFILE/tilde.json");
+            if (urlJson != null) {
+                File json = new File(urlJson.toURI());
+
+                Gson gson = new Gson();
+
+                // Lecture du fichier
+                JsonObject root = gson.fromJson(new FileReader(json), JsonObject.class);
+
+                // Extraction du tableau "chemin"
+                int[][] tableau = gson.fromJson(root.get("chemin"), int[][].class);
+
+                //creation de la liste des tildes
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

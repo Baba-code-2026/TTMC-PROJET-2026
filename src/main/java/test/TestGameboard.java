@@ -1,7 +1,7 @@
 package test;
 
-import modele.Game;
-import modele.GameBoard;
+import models.Game;
+import models.GameBoard;
 import java.io.File;
 import java.net.URI;
 

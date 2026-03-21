@@ -1,7 +1,7 @@
 package test;
 
-import modele.question.Question;
-import modele.question.Theme;
+import models.question.Question;
+import models.question.Theme;
 
 import java.io.File;
 import java.net.URI;
