@@ -22,7 +22,7 @@ public class Game {
     private final int MAX_ENTITIES = 5;
 
     //Constructeur
-    Game(GameBoard gBoard) {
+    public Game() {
         this.gBoard = GameBoard.getInstance(this);
         entities = new ArrayList<>();
         playersDead = new ArrayList<>();
@@ -37,7 +37,7 @@ public class Game {
         String []tabNamePlayer = {"Flash McQueen", "Mater", "Sally", "Doc Hudson"};
         for (int i = 0; i < nbEntities; i++){
             // IL faut aller Chercher Tield de Départ.
-            Tilde depart = gBoard.checkTilde(0);
+            Tile depart = gBoard.checkTilde(0);
             entities.add(new Player(0,tabNamePlayer[i],depart.getPositionX(),depart.getPositionY()));
             //Lancement du jeu
             turnManagement();
@@ -55,14 +55,14 @@ public void turnManagement(){
                 // Créer une méthode starTurn dans Player et ses Etats
                 // Cette méthode starTurn s'occupera de mettre l'attribut en alreadyVersusInTurn en false
 
-                Tilde tildePlayer = gBoard.checkTilde(p.getScore());
+                Tile tildePlayer = gBoard.checkTilde(p.getScore());
                 Theme themeTildePlayer = tildePlayer.getTheme();
                 //donne le Sujet du theme puis demande la difficulté et renvoie la Question
                 Question questionForPlayer = themeTildePlayer.getQuestionAlea(1);
                 // Donne la question au Joueur et il doit y répondre avec une méthode qui renvoie le score
                 // Exemple Méthode int point = answerQuestion(questionForPlayer);
                 int point = 1;
-                Tilde newTildePlayer = gBoard.checkTilde(p.getScore() + point);
+                Tile newTildePlayer = gBoard.checkTilde(p.getScore() + point);
                 p.moveEntity(newTildePlayer.getNumber(), newTildePlayer.getPositionX(), newTildePlayer.getPositionY());
 
                 if(getNbTurn() >= 3) { // Pour empêcher des duels au début du jeu.
@@ -97,7 +97,7 @@ public void turnManagement(){
                     Bot frank = (Bot) e;
                     Random rand = new Random();
                     int point = rand.nextInt(2) + 1;
-                    Tilde newTildeBot = gBoard.checkTilde(frank.getScore() + point);
+                    Tile newTildeBot = gBoard.checkTilde(frank.getScore() + point);
                     frank.moveEntity(newTildeBot.getNumber(), newTildeBot.getPositionX(), newTildeBot.getPositionY());
                     Iterator<Entity> itBot = iterator();
                     while (itBot.hasNext())
@@ -122,7 +122,7 @@ public void turnManagement(){
                                     entities.remove(p2);
                                 }else
                                 {
-                                    Tilde newTildePlayer = gBoard.checkTilde(p2.getScore() + 2);
+                                    Tile newTildePlayer = gBoard.checkTilde(p2.getScore() + 2);
                                     p2.moveEntity(newTildePlayer.getNumber(), newTildePlayer.getPositionX(), newTildePlayer.getPositionY());
                                     // Cette méthode endVersusPlayer s'occupera de mettre l'attribut en alreadyVersusInTurn en true
                                     p2.endVersusPlayer();
@@ -145,6 +145,10 @@ public boolean addEntity(Entity entity){
     return entities.add(entity);
 }
 
+
+public GameBoard getGBoard() {
+        return gBoard;
+}
 
 public Iterator<Entity> iterator() {
     return entities.iterator();

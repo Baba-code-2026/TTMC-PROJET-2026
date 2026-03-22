@@ -1,0 +1,18 @@
+[
+  {
+    "number" : 1,
+    "positionX" : 14,
+    "positionY" : 14,
+    "theme" : {
+      "themeName" : "Tourism"
+    }
+  },
+  {
+    "number" : 2,
+    "positionX" : 24,
+    "positionY" : 24,
+    "theme" : {
+      "themeName" : "Informatic"
+    }
+  }
+]

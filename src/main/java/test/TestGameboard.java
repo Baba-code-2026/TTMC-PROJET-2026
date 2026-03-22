@@ -8,10 +8,7 @@ import java.net.URI;
 public class TestGameboard {
     public static void main(String[] args) {
         // 1. Crée un vrai objet Game au lieu de null
-        Game game = null;
-
-        // 2. Récupère le singleton
-        GameBoard gb = GameBoard.getInstance(game);
+        Game game = new Game();
 
         try {
             // 3. Récupération du fichier dans le dossier resources
@@ -20,7 +17,7 @@ public class TestGameboard {
             File jsonTilde = new File(uri);
 
             // 4. Appel de la création
-            gb.createTilde(jsonTilde);
+            game.getGBoard().createTilde(jsonTilde);
 
             System.out.println("Chargement réussi !");
         } catch (Exception e) {

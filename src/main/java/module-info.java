@@ -10,9 +10,18 @@ module com.example.ttmc2026 {
     // AJOUTE CETTE LIGNE pour la classe Question
     opens models.question to com.google.gson;
 
-    opens vue to javafx.fxml;
-    exports vue;
+    opens controllers to javafx.fxml;
+    exports controllers;
+
+
+    exports Base to javafx.graphics;
+    opens Base to javafx.fxml;
+
+
+
+    /*opens views to javafx.fxml;
+    exports views;
     exports test;
     exports;
-    opens to
+    opens to;*/
 }

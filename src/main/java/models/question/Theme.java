@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class Theme {
     // Attributs
-    private String themeName; // aucune modif
+    private final String themeName; // aucune modif
     private ArrayList<Subject> subjects;
     private Question currentQuestion;
 

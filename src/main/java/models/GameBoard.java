@@ -16,23 +16,23 @@ public class GameBoard {
     //Attributs
     private static GameBoard singleton = null;
     private Game game;
-    private ArrayList<Tilde> tildes;
+    private ArrayList<Tile> tildes;
 
     private GameBoard(Game game){
         this.game = game;
         tildes = new ArrayList<>();
     }
 
-    public int answerQuestion(Entity e, Tilde t){
+    public int answerQuestion(Entity e, Tile t){
         return 0;
     }
 
-    public Tilde getNextTilde(Tilde t, int times){
+    public Tile getNextTilde(Tile t, int times){
         return null;
     }
 
-    public Tilde checkTilde(int score){
-        for( Tilde t : tildes){
+    public Tile checkTilde(int score){
+        for( Tile t : tildes){
             if(score ==t.getNumber()){
                 return t;
             }
@@ -44,10 +44,10 @@ public class GameBoard {
         // Ici on va ajouter les cases sauvegardées dans le json
         Gson gson = new Gson();
         try (java.io.FileReader reader = new java.io.FileReader(json)) {
-            java.lang.reflect.Type listType = new com.google.gson.reflect.TypeToken<ArrayList<Tilde>>(){}.getType();
-            ArrayList<Tilde> listTildes = gson.fromJson(reader, listType);
+            java.lang.reflect.Type listType = new com.google.gson.reflect.TypeToken<ArrayList<Tile>>(){}.getType();
+            ArrayList<Tile> listTildes = gson.fromJson(reader, listType);
 
-            for (Tilde tilde : listTildes) {
+            for (Tile tilde : listTildes) {
                 this.tildes.add(tilde);
             }
             System.out.println("Chargement réussi : " + tildes.size() + " cases.");
@@ -90,5 +90,9 @@ public class GameBoard {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public ArrayList<Tile> getTiles() {
+        return tildes;
     }
 }
