@@ -1,0 +1,22 @@
+package com.example.ttmc2026;
+
+import com.example.ttmc2026.controllers.GameBoardController;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import java.io.IOException;
+
+public class HelloApplication extends Application {
+    @Override
+    public void start(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/views/GameBoardView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 700);
+        GameBoardController  controller = fxmlLoader.getController();
+        //Dessine les cases dans le view
+        controller.drawTiles();
+        stage.setTitle("Hello les foux!");
+        stage.setScene(scene);
+        stage.show();
+    }
+}
