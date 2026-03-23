@@ -41,6 +41,9 @@ import java.util.Map;
  */
 public class HelloController {
 
+    /**
+     *  GAMEBOARD
+     */
     private static final int LARGEUR_CASE = 80; /* Largeur graphique d'une case du plateau */
     private static final int HAUTEUR_CASE = 55; /* Hauteur graphique d'une case du plateau */
     private static final int RAYON_PION = 8; /* Rayon d'un pion pour permettre à 4 pions de tenir sur une case */
@@ -90,6 +93,10 @@ public class HelloController {
             Color.LIMEGREEN
     };
 
+    /**
+     * hello-view -> gameboard
+     */
+
     /* Grille graphique du plateau. */
     @FXML
     private GridPane plateauGrille;
@@ -118,6 +125,8 @@ public class HelloController {
      *
      * L'indice 0 correspond à la case 1,
      * L'indice 1 correspond à la case 2, etc.
+     *
+     * DE BASE DANS LE GAMEBOARD (ajouter les objets Tilde)
      */
     private final ArrayList<int[]> cheminCoordonnees = new ArrayList<>();
 
@@ -138,6 +147,8 @@ public class HelloController {
      * Exemple :
      *      - valeur 0 → case 1
      *      - valeur 1 → case 2
+     *
+     * Envoyer dans Player
      */
     private int[] positionsJoueurs;
 
@@ -159,7 +170,10 @@ public class HelloController {
         Platform.runLater(this::initialiserPartie);
     }
 
-    /* Cette méthode est appelée par le bouton "Back to menu". */
+    /* Cette méthode est appelée par le bouton "Back to menu".
+    *
+    * Bouton pour reposer question à la place du back to menu
+    */
     @FXML
     private void onRetourMenuClick() {
         try {
@@ -208,6 +222,8 @@ public class HelloController {
     }
 
     /**
+     * GAMEBOARDCONTROLLER
+     *
      * Construit visuellement tout le plateau de jeu à partir de la matrice "chemin".
      *
      * Cette méthode parcourt la matrice contenant les numéros des cases et :
@@ -303,6 +319,8 @@ public class HelloController {
     }
 
     /**
+     * GAMEBOARD
+     *
      * Crée un fond en damier pour les cases spéciales du plateau.
      *
      * Ce damier est utilisé pour distinguer visuellement :
@@ -378,6 +396,8 @@ public class HelloController {
     }
 
     /**
+     *  GAMEBOARD
+     *
      * Met à jour l'affichage des pions sur le plateau.
      * Tous les conteneurs de pions sont d'abord vidés, puis chaque pion est replacé sur sa case actuelle.
      */
@@ -397,6 +417,8 @@ public class HelloController {
     }
 
     /**
+     * GAMECONTOLLER
+     *
      * Lance le tour du joueur courant.
      *
      * Elle gère les cas suivants :
@@ -640,6 +662,8 @@ public class HelloController {
     /**
      * Affiche un popup d'information qui ne peut pas être fermé manuellement.
      * Le joueur doit cliquer sur le bouton prévu.
+     *
+     * NE PAS LE BLOQUER MAIS BOUTON QUI PERMET D'AFFICHER LA QUESTION
      *
      * @param titre titre du popup
      * @param message message à afficher
