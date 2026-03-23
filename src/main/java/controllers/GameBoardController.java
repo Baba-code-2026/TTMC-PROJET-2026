@@ -26,7 +26,7 @@ public class GameBoardController {
         Theme tourism = new Theme("Tourism");
         Theme informatic = new  Theme("Informatic");
         Theme entertainment = new Theme("Entertainment");
-        game.getGBoard().getTiles().add(new Tile(1,14,14,tourism));
+        /*game.getGBoard().getTiles().add(new Tile(1,14,14,tourism));
         game.getGBoard().getTiles().add(new Tile(2,74,14, informatic));
         game.getGBoard().getTiles().add(new Tile(3,134,14, entertainment));
         game.getGBoard().getTiles().add(new Tile(4,134,74, tourism));
@@ -42,7 +42,7 @@ public class GameBoardController {
             r.setStroke(Color.BLACK);
 
             boardPane.getChildren().add(r);
-        }
+        }*/
     }
 
     private Paint themeToColor(String themeName) {
