@@ -4,42 +4,39 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: beige;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <Label fx:id="gameName" contentDisplay="CENTER" text="How Much Do You Give Yourself Cars Version" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="28.0" />
-         </font>
-         <BorderPane.margin>
-            <Insets top="10.0" />
-         </BorderPane.margin>
-      </Label>
-   </top>
-   <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="startButton" mnemonicParsing="false" onAction="#onButtonStartClick" prefWidth="200.0" text="Start">
-               <VBox.margin>
-                  <Insets left="200.0" top="50.0" />
-               </VBox.margin>
-            </Button>
-            <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#OnButtonSettingsClick" prefWidth="200.0" text="Settings">
-               <VBox.margin>
-                  <Insets left="200.0" top="50.0" />
-               </VBox.margin>
-            </Button>
-            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#onButtonExitClick" prefWidth="200.0" text="Exit">
-               <VBox.margin>
-                  <Insets left="200.0" top="50.0" />
-               </VBox.margin>
-            </Button>
-         </children>
-      </VBox>
-   </center>
-   <bottom>
-      <Label fx:id="produced" text="Produced by Ludovic Roels, Bastien Fievez, William Kestelyn and Tom Denuit" BorderPane.alignment="CENTER" />
-   </bottom>
-</BorderPane>
+<StackPane style="-fx-background-color: beige;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ttmc2026.controllers.MainController">
+   <children>
+      <BorderPane fx:id="border" maxHeight="400.0" maxWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: beige;">
+         <top>
+            <Label fx:id="gameName" contentDisplay="CENTER" text="How Much Do You Give Yourself Cars Version" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+         <center>
+            <VBox alignment="CENTER" spacing="30.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="startButton" mnemonicParsing="false" onAction="#onButtonStartClick" prefWidth="220.0" text="Start" />
+                  <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#onButtonSettingsClick" prefWidth="220.0" text="Settings" />
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#onButtonExitClick" prefWidth="220.0" text="Exit" />
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <Label fx:id="produced" text="Produced by Ludovic Roels, Bastien Fievez, William Kestelyn and Tom Denuit" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" />
+               </BorderPane.margin>
+            </Label>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>

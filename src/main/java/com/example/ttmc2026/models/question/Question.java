@@ -1,4 +1,4 @@
-package models.question;
+package com.example.ttmc2026.models.question;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
@@ -9,24 +9,34 @@ import java.io.FileReader;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+/**
+ * Représente une question du jeu.
+ * Cette classe contient aussi une méthode utilitaire permettant de charger toutes les questions depuis un fichier JSON.
+ */
 public class Question {
-    // Attributs
+
     private String theme;
     private String subject;
     private int difficulty;
     private String question;
-
+    /**
+     * Bonne réponse à la question.
+     * Le nom du champ JSON est "answer", d'où l'utilisation de l'annotation SerializedName.
+     */
     @SerializedName("answer")
     private String trueAnswer;
-
+    /**
+     * Liste des réponses proposées à l'utilisateur.
+     * Le nom du champ JSON est "choices".
+     */
     @SerializedName("choices")
     private ArrayList<String> answers;
 
-    // Constructeur vide (Obligatoire pour que Gson puisse instancier la classe)
+    /* Constructeur vide */
     public Question() {
     }
 
-    // Constructeur complet (Utile pour créer des questions manuellement)
+    /* Constructeur complet. */
     public Question(String theme, String subject, String question, String trueAnswer, int difficulty, ArrayList<String> answers) {
         this.theme = theme;
         this.subject = subject;
@@ -36,22 +46,27 @@ public class Question {
         this.answers = answers;
     }
 
-    // lecture des questions et du JSON
+    /**
+     * Charge toutes les questions contenues dans un fichier JSON.
+     * En cas d'erreur, la méthode retourne une liste vide afin d'éviter un arrêt brutal du programme.
+     *
+     * @param jsonFile fichier JSON contenant les questions
+     * @return liste des questions chargées
+     */
     public static ArrayList<Question> loadQuestions(File jsonFile) {
         Gson gson = new Gson();
-        try (FileReader reader = new FileReader(jsonFile)) {
-            // On définit le type attendu : ArrayList<Question>
-            Type listType = new TypeToken<ArrayList<Question>>(){}.getType();
 
-            // On désérialise le JSON directement en liste d'objets
-            return gson.fromJson(reader, listType);
-        } catch (Exception e) {
-            System.err.println("Erreur lors du chargement du JSON de questions :");
-            e.printStackTrace();
-            return new ArrayList<>(); // Retourne une liste vide pour éviter les crashs
+        try (FileReader reader = new FileReader(jsonFile)) {
+            Type typeListeQuestions = new TypeToken<ArrayList<Question>>() {}.getType();
+            return gson.fromJson(reader, typeListeQuestions);
+        } catch (Exception exception) {
+            System.err.println("Erreur lors du chargement du fichier JSON des questions.");
+            exception.printStackTrace();
+            return new ArrayList<>();
         }
     }
 
+    /* Getters et Setters */
     public String getTheme() {
         return theme;
     }
@@ -80,8 +95,9 @@ public class Question {
         return this.trueAnswer.equalsIgnoreCase(playerAnswer);
     }
 
+    /* Méthode toString() pour afficher les données */
     @Override
     public String toString() {
-        return "Question [" + theme + " - " + subject + " (Diff: " + difficulty + ")] : " + question +"\n\t\t";
+        return "Question [" + theme + " - " + subject + " (Diff: " + difficulty + ")] : " + question + "\n\t\t";
     }
 }
