@@ -131,4 +131,8 @@ public class GameBoard {
             e.printStackTrace();
         }
     }
+
+    public ArrayList<Tilde> getTiles() {
+        return tildes;
+    }
 }

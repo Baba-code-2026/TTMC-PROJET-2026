@@ -1,21 +1,21 @@
-package models;
+package com.example.ttmc2026.models;
 
-import models.question.Theme;
+import com.example.ttmc2026.models.question.Theme;
 
-public class Tilde {
+public class Tile {
 
     //Attributs
     private final int positionX, positionY, number;
     private Theme theme;
 
-    public Tilde(int number) {
+    public Tile(int number, int positionX, int positionY, Theme theme) {
         this.number = number ;
-
-        this.positionY = 0 ;
-        this.positionX = 0 ;
+        this.theme =  theme;
+        this.positionY = positionY ;
+        this.positionX = positionX ;
     }
     
-    public int countTilde(int[][] chemin)
+    public int countTile(int[][] chemin)
     {
         int nombreDeCases = 0;
         for (int[] ligne : chemin) {

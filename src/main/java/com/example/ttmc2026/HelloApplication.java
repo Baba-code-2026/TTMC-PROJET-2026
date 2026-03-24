@@ -1,19 +1,28 @@
 package com.example.ttmc2026;
 
-/**
- * Classe de compatibilité temporaire.
- *
- * Maintenant que la classe principale réelle est AppTTMC, cette classe ne doit plus contenir une deuxième logique de démarrage JavaFX.
- * Son seul rôle est donc de rediriger vers AppTTMC afin de conserver une structure stable pendant la phase de réorganisation du projet.
- */
-public class HelloApplication {
+import com.example.ttmc2026.controllers.GameBoardController;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import java.io.IOException;
 
-    /** Point d'entrée de compatibilité.
-     * Cette méthode redirige simplement l'exécution vers la véritable classe principale de l'application.
-     *
-     * @param arguments arguments de lancement
-     */
-    public static void main(String[] arguments) {
-        AppTTMC.main(arguments);
+public class HelloApplication extends Application {
+    @Override
+    public void start(Stage stage) throws IOException {
+<<<<<<<< HEAD:src/main/java/HelloApplication.java
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        stage.setTitle("Hello Ludo!");
+========
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/views/GameBoardView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 700);
+        GameBoardController  controller = fxmlLoader.getController();
+        //Dessine les cases dans le view
+        controller.drawTiles();
+        stage.setTitle("Hello les foux!");
+>>>>>>>> origin/main:src/main/java/com/example/ttmc2026/HelloApplication.java
+        stage.setScene(scene);
+        stage.show();
     }
 }

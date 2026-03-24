@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class HelloApplication extends Application {
+public class com.example.ttmc2026.HelloApplication extends Application {
 
     private final int TAILLE_CASE = 60;
     private final int[][] chemin = {

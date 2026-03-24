@@ -31,10 +31,8 @@ public class Game {
 
     /**
      * Construit une nouvelle partie.
-     *
-     * @param gBoard plateau associé à la partie
      */
-    Game(GameBoard gBoard) {
+    public Game() {
         this.gBoard = GameBoard.getInstance(this);
         entities = new ArrayList<>();
         playersDead = new ArrayList<>();
@@ -198,5 +196,9 @@ public class Game {
     /* Getter du nombre de tours */
     public int getNbTurn() {
         return nbTurn;
+    }
+
+    public GameBoard getGBoard() {
+        return gBoard;
     }
 }
