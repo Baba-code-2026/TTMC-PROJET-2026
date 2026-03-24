@@ -10,18 +10,12 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-<<<<<<<< HEAD:src/main/java/HelloApplication.java
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello Ludo!");
-========
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/views/GameBoardView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 700);
         GameBoardController  controller = fxmlLoader.getController();
         //Dessine les cases dans le view
         controller.drawTiles();
         stage.setTitle("Hello les foux!");
->>>>>>>> origin/main:src/main/java/com/example/ttmc2026/HelloApplication.java
         stage.setScene(scene);
         stage.show();
     }
