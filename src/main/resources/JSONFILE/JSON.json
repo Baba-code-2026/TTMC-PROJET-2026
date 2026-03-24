@@ -297,13 +297,13 @@
   "question": "In the context of the Liskov Substitution Principle (LSP), what is the core requirement?",
   "answer": "Subtypes must be usable as replacements for their base types without altering program correctness",
   "choices": ["Subtypes must be usable as replacements for their base types without altering program correctness", "Objects should only depend on concrete classes, never on abstractions", "A class should be open for extension but closed for modification", "All classes must implement the same interface"]
-},
+  },
   {
   "theme": "Informatics",
   "subject": "OOP",
   "difficulty": 4,
   "question": "What is \"Multiple Inheritance\" in OOP and why is it often avoided in languages like Java or C#?",
-  "answer": "It allows a class to inherit from multiple parent classes, which can lead to the \"Diamond Problem.\"",
+  "answer": "It allows a class to inherit from multiple parent classes, which can lead to the \"Diamond Problem\"",
   "choices": ["It refers to having too many methods in one class", "It allows a class to inherit from multiple parent classes, which can lead to the \"Diamond Problem\"", "It is the process of creating many instances of one object", "It prevents the use of polymorphism"]
 }
 ]
